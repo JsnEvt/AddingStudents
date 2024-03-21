@@ -9,11 +9,15 @@ package studentapp;
  * @author jason
  */
 public class Student {
+    private static int lastUsedId = 1000;
+    private int studId;
     private String name;
     private String phone;
     private String email;
 
     public Student(String name, String phone, String email) {
+        studId = lastUsedId;
+        lastUsedId++;
         this.name = name;
         this.phone = phone;
         this.email = email;
@@ -47,7 +51,8 @@ public class Student {
     
     @Override 
     public String toString(){
-        return String.format("%-20s", name) + 
+        return String.format("%8s", studId) +  "  " +
+               String.format("%-20s", name) + 
                String.format("%-20s", phone) + 
                String.format("%-20s", email);
     }

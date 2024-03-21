@@ -39,11 +39,13 @@ public class FXMLAppController implements Initializable {
 
     @FXML
     private void addAStudentButtonHandler(ActionEvent event) throws Exception {
-            Utility.changeToScene(getClass(), event, "AddStudentFXML.fxml");
+        Utility.changeToScene(getClass(), event, "AddStudentFXML.fxml");
     }
 
     @FXML
-    private void dispalyAllStudentsButtonHandler(ActionEvent event) {
+    private void dispalyAllStudentsButtonHandler(ActionEvent event) throws Exception {
+        Utility.changeToScene((getClass()), event, "StudentDisplayAllFXML.fxml");
+
     }
 
     @FXML
@@ -56,6 +58,7 @@ public class FXMLAppController implements Initializable {
 
     @FXML
     private void exitButtonHandler(ActionEvent event) {
+        System.exit(0);
     }
     
 }
