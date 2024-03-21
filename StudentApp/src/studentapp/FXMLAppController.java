@@ -49,11 +49,13 @@ public class FXMLAppController implements Initializable {
     }
 
     @FXML
-    private void addCourseButtonHandler(ActionEvent event) {
+    private void addCourseButtonHandler(ActionEvent event) throws Exception {
+        Utility.changeToScene((getClass()), event, "CourseAddFXML.fxml");
     }
 
     @FXML
-    private void displayAllCoursesButtonHandler(ActionEvent event) {
+    private void displayAllCoursesButtonHandler(ActionEvent event) throws Exception {
+        Utility.changeToScene((getClass()), event, "CourseDisplayAllFXML.fxml");
     }
 
     @FXML
