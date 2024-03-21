@@ -23,6 +23,9 @@ public class Student {
         this.email = email;
     }
     
+    public int getStudId(){
+        return studId;
+    }
     
 
     public String getName() {

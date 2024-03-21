@@ -5,12 +5,14 @@
 package studentapp;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -29,6 +31,10 @@ public class EnrolmentAddFXMLController implements Initializable {
     private Button clearAllEnrolmentButton;
     @FXML
     private Button returnToMainMenu;
+    
+    static ArrayList<Enrolment> enrolmentsArrayList = new ArrayList<Enrolment>();
+    
+    
 
     /**
      * Initializes the controller class.
@@ -53,8 +59,14 @@ public class EnrolmentAddFXMLController implements Initializable {
 
     @FXML
     private void addEnrolmentsButtonHandler(ActionEvent event) {
-        printSelectedStudent();
+        //printSelectedStudent();
 
+        Enrolment e = new Enrolment(studentComboBox.getValue(), courseComboBox.getValue());
+                
+                enrolmentsArrayList.add(e);
+        
+        JOptionPane.showMessageDialog(null, "Success: Student course enrolment created:" + "\n" + 
+                "' " + e.toString());
     }
 
     @FXML
