@@ -5,17 +5,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="383.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentapp.FXMLAppController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentapp.FXMLAppController">
    <children>
       <Button fx:id="addAStudentButton" layoutX="53.0" layoutY="103.0" mnemonicParsing="false" onAction="#addAStudentButtonHandler" text="Add Sttudent" />
       <Button fx:id="dispalyAllStudentsButton" layoutX="53.0" layoutY="146.0" mnemonicParsing="false" onAction="#dispalyAllStudentsButtonHandler" text="Display all students" />
       <Button fx:id="addCourseButton" layoutX="53.0" layoutY="192.0" mnemonicParsing="false" onAction="#addCourseButtonHandler" text="Add Course" />
       <Button fx:id="displayAllCoursesButton" layoutX="49.0" layoutY="237.0" mnemonicParsing="false" onAction="#displayAllCoursesButtonHandler" text="Display all courses" />
-      <Button fx:id="exitButton" layoutX="49.0" layoutY="317.0" mnemonicParsing="false" onAction="#exitButtonHandler" text="Exit" />
-      <Label contentDisplay="CENTER" layoutX="53.0" layoutY="41.0" prefHeight="17.0" prefWidth="215.0" text="Students Admin V.1.0">
+      <Button fx:id="exitButton" layoutX="49.0" layoutY="371.0" mnemonicParsing="false" onAction="#exitButtonHandler" text="Exit" />
+      <Label contentDisplay="CENTER" layoutX="53.0" layoutY="41.0" prefHeight="35.0" prefWidth="252.0" text="Students Admin V.1.0">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
+      <Button fx:id="addCourseEnrolmentsButton" layoutX="49.0" layoutY="286.0" mnemonicParsing="false" onAction="#addCourseEnrolmentsButtonHandler" text="Add Course Enrolment(s)" />
    </children>
 </AnchorPane>

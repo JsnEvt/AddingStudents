@@ -82,5 +82,5 @@ public class CourseAddFXMLController implements Initializable {
     private void returnToMainMenuButtonHandler(ActionEvent event) throws Exception {
         Utility.changeToScene(getClass(), event, "FXMLApp.fxml");
     }
-    
+ 
 }

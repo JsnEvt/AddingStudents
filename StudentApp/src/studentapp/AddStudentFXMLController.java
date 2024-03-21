@@ -42,7 +42,7 @@ public class AddStudentFXMLController implements Initializable {
     private Label emailLabel;
     
     
-    static ArrayList<Student> studentsArrayList;
+    static ArrayList<Student> studentsArrayList = new ArrayList<>();
     
     
     /**

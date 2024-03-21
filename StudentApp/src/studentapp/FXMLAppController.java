@@ -28,6 +28,8 @@ public class FXMLAppController implements Initializable {
     private Button displayAllCoursesButton;
     @FXML
     private Button exitButton;
+    @FXML
+    private Button addCourseEnrolmentsButton;
 
     /**
      * Initializes the controller class.
@@ -61,6 +63,11 @@ public class FXMLAppController implements Initializable {
     @FXML
     private void exitButtonHandler(ActionEvent event) {
         System.exit(0);
+    }
+
+    @FXML
+    private void addCourseEnrolmentsButtonHandler(ActionEvent event) throws Exception {
+        Utility.changeToScene (getClass(), event, "EnrolmentAddFXML.fxml");
     }
     
 }
