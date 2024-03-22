@@ -18,5 +18,6 @@
          </font>
       </Label>
       <Button fx:id="addCourseEnrolmentsButton" layoutX="49.0" layoutY="286.0" mnemonicParsing="false" onAction="#addCourseEnrolmentsButtonHandler" text="Add Course Enrolment(s)" />
+      <Button fx:id="addTestDataButton" layoutX="229.0" layoutY="103.0" mnemonicParsing="false" onAction="#addTestDataButtonHandler" text="Test Data" />
    </children>
 </AnchorPane>

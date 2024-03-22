@@ -30,6 +30,8 @@ public class FXMLAppController implements Initializable {
     private Button exitButton;
     @FXML
     private Button addCourseEnrolmentsButton;
+    @FXML
+    private Button addTestDataButton;
 
     /**
      * Initializes the controller class.
@@ -37,6 +39,7 @@ public class FXMLAppController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
     }    
 
     @FXML
@@ -68,6 +71,24 @@ public class FXMLAppController implements Initializable {
     @FXML
     private void addCourseEnrolmentsButtonHandler(ActionEvent event) throws Exception {
         Utility.changeToScene (getClass(), event, "EnrolmentAddFXML.fxml");
+    }
+
+    @FXML
+    private void addTestDataButtonHandler(ActionEvent event) {
+        // Create some Students
+        AddStudentFXMLController.studentsArrayList.add(new Student("JS", "123456", "js@gemail.com"));
+        AddStudentFXMLController.studentsArrayList.add(new Student("AS", "654321", "as@gemail.com"));
+        AddStudentFXMLController.studentsArrayList.add(new Student("ES", "632541", "es@gemail.com"));
+        
+        // Create some Courses
+        CourseAddFXMLController.coursesArrayList.add(new Course("ADM6", "Administrador"));
+        CourseAddFXMLController.coursesArrayList.add(new Course("MED8", "Medicina"));
+        CourseAddFXMLController.coursesArrayList.add(new Course("TEC10", "Tecnologia"));
+        
+        //Create Enrolments
+        EnrolmentAddFXMLController.enrolmentsArrayList.add(
+                new Enrolment (AddStudentFXMLController.studentsArrayList.get(0),
+                CourseAddFXMLController.coursesArrayList.get(0)));
     }
     
 }
