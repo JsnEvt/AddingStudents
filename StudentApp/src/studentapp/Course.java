@@ -12,11 +12,17 @@ public class Course {
     private String code;
     private String name;
 
-    public Course() {
-        this("", "");
+    public Course() throws Exception {
+        this("unknown", "unknown");
     }
     
-    public Course(String code, String name){
+    public Course(String code, String name) throws CourseException{
+        
+        if(code.length() == 0)
+                throw new CourseException ("Error: Code cannot be blank.");
+            else if(name.length() == 0)
+                throw new CourseException ("Error: Name cannot be blank.");
+                    
         this.code = code;
         this.name = name;
     }
@@ -25,7 +31,9 @@ public class Course {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(String code) throws CourseException{
+        if(code.length() == 0)
+            throw new CourseException ("Error: Code cannot be blank.");
         this.code = code;
     }
 
@@ -33,7 +41,9 @@ public class Course {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) throws CourseException {
+        if(name.length() == 0)
+            throw new CourseException ("Error: Name cannot be blank.");
         this.name = name;
     }
     

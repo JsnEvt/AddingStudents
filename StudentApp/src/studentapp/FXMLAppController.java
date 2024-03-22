@@ -79,11 +79,11 @@ public class FXMLAppController implements Initializable {
     }
 
     @FXML
-    private void addTestDataButtonHandler(ActionEvent event) {
+    private void addTestDataButtonHandler(ActionEvent event) throws Exception {
         // Create some Students
-        AddStudentFXMLController.studentsArrayList.add(new Student("JS", "123456", "js@gemail.com"));
-        AddStudentFXMLController.studentsArrayList.add(new Student("AS", "654321", "as@gemail.com"));
-        AddStudentFXMLController.studentsArrayList.add(new Student("ES", "632541", "es@gemail.com"));
+        AddStudentFXMLController.studentsArrayList.add(new Student("José", "123456", "js@gemail.com"));
+        AddStudentFXMLController.studentsArrayList.add(new Student("Adilma", "654321", "as@gemail.com"));
+        AddStudentFXMLController.studentsArrayList.add(new Student("Erlan", "632541", "es@gemail.com"));
         
         // Create some Courses
         CourseAddFXMLController.coursesArrayList.add(new Course("ADM6", "Administrador"));

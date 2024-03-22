@@ -61,12 +61,17 @@ public class EnrolmentAddFXMLController implements Initializable {
     private void addEnrolmentsButtonHandler(ActionEvent event) {
         //printSelectedStudent();
 
+        try{
         Enrolment e = new Enrolment(studentComboBox.getValue(), courseComboBox.getValue());
                 
                 enrolmentsArrayList.add(e);
         
         JOptionPane.showMessageDialog(null, "Success: Student course enrolment created:" + "\n" + 
                 "' " + e.toString());
+        }
+        catch(Exception err){
+            JOptionPane.showMessageDialog(null,"Error: Please, select a student an a course.");
+        }
     }
 
     @FXML

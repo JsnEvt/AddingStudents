@@ -51,7 +51,7 @@ public class AddStudentFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        studentsArrayList = new ArrayList<Student>();
+        //studentsArrayList = new ArrayList<Student>();
     }    
 
     @FXML
@@ -62,32 +62,14 @@ public class AddStudentFXMLController implements Initializable {
        String phoneStr =phoneTextField.getText().trim();
        String emailStr = emailTextField.getText().trim();
        
-       
-       if(dataValid == true){
-           if(nameStr.length() == 0){
-               JOptionPane.showMessageDialog(null, "Error: Name cannot be blank");
-               dataValid = false;
-           }
-       }
-       
-       if(dataValid == true){
-           if(phoneStr.length() == 0){
-               JOptionPane.showMessageDialog(null, "Error: Phone cannot be blank");
-               dataValid = false;
-           }
-       }
-       
-        if(dataValid == true){
-           if(emailStr.contains(("@"))== false){
-               JOptionPane.showMessageDialog(null, "Error: E-mail not valid");
-               dataValid = false;
-           }
-       }
-        
-        if(dataValid == true) {
+            
+        try{
             Student s = new Student(nameStr, phoneStr, emailStr);
             studentsArrayList.add(s);
             JOptionPane.showMessageDialog(null, "Success: student created.");
+        }
+        catch (StudentException err){
+            JOptionPane.showMessageDialog(null, err.getMessage());
         }
     }
 

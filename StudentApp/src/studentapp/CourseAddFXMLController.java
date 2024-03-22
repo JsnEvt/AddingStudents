@@ -50,25 +50,14 @@ public class CourseAddFXMLController implements Initializable {
        String nameStr = nameTextField.getText().trim();
        
        
-       if(dataValid == true){
-           if(codeStr.length() == 0){
-               JOptionPane.showMessageDialog(null, "Error: Code cannot be blank");
-               dataValid = false;
-           }
-       }
-       
-       if(dataValid == true){
-           if(nameStr.length() == 0){
-               JOptionPane.showMessageDialog(null, "Error: Name cannot be blank");
-               dataValid = false;
-           }
-       }
-       
-        
-        if(dataValid == true) {
+
+        try {
             Course c = new Course(codeStr, nameStr);
             coursesArrayList.add(c);
             JOptionPane.showMessageDialog(null, "Success: course created.");
+        }
+        catch(CourseException err){
+            JOptionPane.showMessageDialog(null, err.getMessage());
         }
     }
 
