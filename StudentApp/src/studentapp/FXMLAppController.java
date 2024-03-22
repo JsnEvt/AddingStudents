@@ -17,7 +17,7 @@ import javafx.scene.control.Label;
  *
  * @author jason
  */
-public class FXMLAppController implements Initializable {
+public class FXMLAppController implements Initializable, IExitable {
 
     @FXML
     private Button addAStudentButton;
@@ -70,7 +70,8 @@ public class FXMLAppController implements Initializable {
 
     @FXML
     private void exitButtonHandler(ActionEvent event) {
-        System.exit(0);
+        
+        this.exitClick();
     }
 
     @FXML
