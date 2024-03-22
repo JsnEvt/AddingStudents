@@ -47,6 +47,9 @@ public class Course {
         this.name = name;
     }
     
+        public String toStringWithLineBreak(){
+            return code + "\n" + name + "\n";
+        }
     
     @Override 
     public String toString(){

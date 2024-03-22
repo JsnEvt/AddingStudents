@@ -49,7 +49,6 @@ public class FXMLAppController implements Initializable, IExitable {
 
         }
         
-    }    
 
     @FXML
     private void addAStudentButtonHandler(ActionEvent event) throws Exception {

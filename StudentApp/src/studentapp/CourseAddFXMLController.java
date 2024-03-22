@@ -4,9 +4,13 @@
  */
 package studentapp;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Formatter;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,6 +24,8 @@ import javax.swing.JOptionPane;
  * @author jason
  */
 public class CourseAddFXMLController implements Initializable {
+    
+    public static final String FILE_NAME = "courses.txt";
 
     @FXML
     private Button addButton;
@@ -71,5 +77,38 @@ public class CourseAddFXMLController implements Initializable {
     private void returnToMainMenuButtonHandler(ActionEvent event) throws Exception {
         Utility.changeToScene(getClass(), event, "FXMLApp.fxml");
     }
- 
-}
+    
+    public static void saveCoursesToFile(){
+            try(Formatter outFile = new Formatter(FILE_NAME)){
+            
+                for (Course c: coursesArrayList){
+                    outFile.format(c.toStringWithLineBreak());
+                }
+            }catch(Exception err){
+                System.out.println("Error: file could not be saved: '" + FILE_NAME + "'."); 
+                JOptionPane.showMessageDialog(null, "Error: file could not be saved: '" + FILE_NAME + "'.");
+            }
+        }
+    
+    public static void loadCoursesFromFile(){
+            try(Scanner inFile = new Scanner(new FileReader(FILE_NAME)))
+            {
+                while(inFile.hasNext() == true){
+                    Course c = new Course(inFile.nextLine(), inFile.nextLine());
+                    coursesArrayList.add(c);
+                }
+            }
+            catch(CourseException err){
+                JOptionPane.showMessageDialog(null,err.getMessage());
+                JOptionPane.showMessageDialog(null, "Error: file could not be loaded: '" + FILE_NAME + "'.");
+            }
+            catch(FileNotFoundException err){
+                //Do nothing. File does not yest exist, so this is fine.
+            }
+            
+            catch(Exception err){
+                    System.out.println("Error: file could not be loaded: '" + FILE_NAME + "'.");
+                    JOptionPane.showMessageDialog(null, "Error: file could not be loaded: '" + FILE_NAME + "'.");
+                    }
+            }
+        }

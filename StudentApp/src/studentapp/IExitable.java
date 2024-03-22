@@ -21,6 +21,10 @@ public interface IExitable {
         alert.showAndWait().ifPresent(response -> {
             if (response == ButtonType.OK) {
                 System.out.println("Exiting application...");
+                
+                //Save the data to file(s)
+                CourseAddFXMLController.saveCoursesToFile();
+                AddStudentFXMLController.saveStudentToFile();
                 Platform.exit();
             }
         });

@@ -29,7 +29,11 @@ public class StudentApp extends Application implements IExitable {
                                             event.consume(); 
     //event.consume() - para consumir o evento e nao ser usado em outra ocasiao inadequada;
         });
-        System.out.println("StudentApp -> start...");
+        System.out.println("StudentApp -> start..."); //procurando um local apropriado para carregar arquivos db.
+        
+        //Load the data from the file(s)...
+        CourseAddFXMLController.loadCoursesFromFile();
+        AddStudentFXMLController.loadStudentFromFile();
     }
 
     /**

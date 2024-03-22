@@ -4,8 +4,6 @@
  */
 package studentapp;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author jason
@@ -20,9 +18,8 @@ public class Student {
     public Student() throws StudentException, Exception {
         this("unknown","unknown","unknown@net");
     }
-
-    public Student(String name, String phone, String email) throws Exception{
-        
+    
+    public Student(int studId, String name, String phone, String email) throws Exception{
         if(name.length() == 0)
             throw new StudentException ("Error: Name cannot be blank.");
         else if(phone.length() == 0)
@@ -31,12 +28,23 @@ public class Student {
             throw new StudentException ("Error: E-mail cannot be blank.");
         else if (email.contains("@") == false)
             throw new StudentException ("Error: Email not valid.");
-                    
-        studId = lastUsedId;
-        lastUsedId++;
+        else if (studId < 0){
+            throw new StudentException("Error: studentID cannot be less than zero.");
+        }
+        if(studId > lastUsedId){
+            lastUsedId = studId +1;
+        }
+        
+        this.studId = studId;
         this.name = name;
         this.phone = phone;
         this.email = email;
+    }
+
+    public Student(String name, String phone, String email) throws Exception{
+        
+        this(lastUsedId, name, phone,email);
+        lastUsedId++;
     }
     
     public int getStudId(){
@@ -75,6 +83,10 @@ public class Student {
         if (email.contains("@") == false)
             throw new StudentException ("Error: Email not valid.");
         this.email = email;
+    }
+    
+    public String toStringWithLineBreak(){
+        return studId + "\n" + name + "\n" + phone + "\n" + email + "\n";
     }
     
     @Override 
