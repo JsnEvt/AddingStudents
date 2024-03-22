@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
@@ -32,6 +33,10 @@ public class FXMLAppController implements Initializable {
     private Button addCourseEnrolmentsButton;
     @FXML
     private Button addTestDataButton;
+    @FXML
+    private Button displayAllCoursesEnrolmentsButton;
+    @FXML
+    private Label headerLabel;
 
     /**
      * Initializes the controller class.
@@ -89,6 +94,11 @@ public class FXMLAppController implements Initializable {
         EnrolmentAddFXMLController.enrolmentsArrayList.add(
                 new Enrolment (AddStudentFXMLController.studentsArrayList.get(0),
                 CourseAddFXMLController.coursesArrayList.get(0)));
+    }
+
+    @FXML
+    private void displayAllCoursesEnrolmentsButtonHandler(ActionEvent event) throws Exception {
+         Utility.changeToScene(getClass(), event, "EnrolmentDisplayAllFXML.fxml");
     }
     
 }

@@ -7,17 +7,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentapp.FXMLAppController">
    <children>
-      <Button fx:id="addAStudentButton" layoutX="53.0" layoutY="103.0" mnemonicParsing="false" onAction="#addAStudentButtonHandler" text="Add Sttudent" />
-      <Button fx:id="dispalyAllStudentsButton" layoutX="53.0" layoutY="146.0" mnemonicParsing="false" onAction="#dispalyAllStudentsButtonHandler" text="Display all students" />
-      <Button fx:id="addCourseButton" layoutX="53.0" layoutY="192.0" mnemonicParsing="false" onAction="#addCourseButtonHandler" text="Add Course" />
-      <Button fx:id="displayAllCoursesButton" layoutX="49.0" layoutY="237.0" mnemonicParsing="false" onAction="#displayAllCoursesButtonHandler" text="Display all courses" />
-      <Button fx:id="exitButton" layoutX="49.0" layoutY="371.0" mnemonicParsing="false" onAction="#exitButtonHandler" text="Exit" />
-      <Label contentDisplay="CENTER" layoutX="53.0" layoutY="41.0" prefHeight="35.0" prefWidth="252.0" text="Students Admin V.1.0">
+      <Button fx:id="addAStudentButton" layoutX="53.0" layoutY="103.0" mnemonicParsing="false" onAction="#addAStudentButtonHandler" prefHeight="25.0" prefWidth="176.0" text="Add Sttudent" />
+      <Button fx:id="dispalyAllStudentsButton" layoutX="53.0" layoutY="146.0" mnemonicParsing="false" onAction="#dispalyAllStudentsButtonHandler" prefHeight="25.0" prefWidth="176.0" text="Display all students" />
+      <Button fx:id="addCourseButton" layoutX="53.0" layoutY="192.0" mnemonicParsing="false" onAction="#addCourseButtonHandler" prefHeight="25.0" prefWidth="176.0" text="Add Course" />
+      <Button fx:id="displayAllCoursesButton" layoutX="53.0" layoutY="235.0" mnemonicParsing="false" onAction="#displayAllCoursesButtonHandler" prefHeight="25.0" prefWidth="176.0" text="Display all courses" />
+      <Button fx:id="exitButton" layoutX="276.0" layoutY="377.0" mnemonicParsing="false" onAction="#exitButtonHandler" text="Exit" />
+      <Label fx:id="headerLabel" contentDisplay="CENTER" layoutX="53.0" layoutY="41.0" prefHeight="35.0" prefWidth="252.0" text="Students Admin V.1.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="addCourseEnrolmentsButton" layoutX="49.0" layoutY="286.0" mnemonicParsing="false" onAction="#addCourseEnrolmentsButtonHandler" text="Add Course Enrolment(s)" />
-      <Button fx:id="addTestDataButton" layoutX="229.0" layoutY="103.0" mnemonicParsing="false" onAction="#addTestDataButtonHandler" text="Test Data" />
+      <Button fx:id="addCourseEnrolmentsButton" layoutX="53.0" layoutY="283.0" mnemonicParsing="false" onAction="#addCourseEnrolmentsButtonHandler" prefHeight="25.0" prefWidth="176.0" text="Add Course Enrolment(s)" />
+      <Button fx:id="addTestDataButton" layoutX="260.0" layoutY="103.0" mnemonicParsing="false" onAction="#addTestDataButtonHandler" text="Test Data" />
+      <Button fx:id="displayAllCoursesEnrolmentsButton" layoutX="53.0" layoutY="329.0" mnemonicParsing="false" onAction="#displayAllCoursesEnrolmentsButtonHandler" text="Display all courses enrolments" />
    </children>
 </AnchorPane>
