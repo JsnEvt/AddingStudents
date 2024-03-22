@@ -29,6 +29,7 @@ public class StudentApp extends Application implements IExitable {
                                             event.consume(); 
     //event.consume() - para consumir o evento e nao ser usado em outra ocasiao inadequada;
         });
+        System.out.println("StudentApp -> start...");
     }
 
     /**

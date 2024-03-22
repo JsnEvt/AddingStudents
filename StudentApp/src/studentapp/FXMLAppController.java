@@ -37,6 +37,7 @@ public class FXMLAppController implements Initializable, IExitable {
     private Button displayAllCoursesEnrolmentsButton;
     @FXML
     private Label headerLabel;
+    
 
     /**
      * Initializes the controller class.
@@ -44,6 +45,9 @@ public class FXMLAppController implements Initializable, IExitable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        //System.out.println("FXMLAppController -> initialize...");
+
+        }
         
     }    
 
