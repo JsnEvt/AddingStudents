@@ -25,6 +25,7 @@ public interface IExitable {
                 //Save the data to file(s)
                 CourseAddFXMLController.saveCoursesToFile();
                 AddStudentFXMLController.saveStudentToFile();
+                EnrolmentAddFXMLController.saveEnrolmentsToFile();
                 Platform.exit();
             }
         });

@@ -34,6 +34,7 @@ public class StudentApp extends Application implements IExitable {
         //Load the data from the file(s)...
         CourseAddFXMLController.loadCoursesFromFile();
         AddStudentFXMLController.loadStudentFromFile();
+        EnrolmentAddFXMLController.loadEnrolmentsFromFile();
     }
 
     /**

@@ -37,6 +37,10 @@ public class Enrolment {
         this.course = course;
     }
     
+    public String toStringWithLineBreak(){
+        return student.getStudId() + "\n" + course.getCode() + "\n";
+    }
+    
     @Override
     public String toString(){
         return student.getName() + " (" + student.getStudId() + ")" +

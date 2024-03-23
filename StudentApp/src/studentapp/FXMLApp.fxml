@@ -18,7 +18,7 @@
          </font>
       </Label>
       <Button fx:id="addCourseEnrolmentsButton" layoutX="53.0" layoutY="283.0" mnemonicParsing="false" onAction="#addCourseEnrolmentsButtonHandler" prefHeight="25.0" prefWidth="176.0" text="Add Course Enrolment(s)" />
-      <Button fx:id="addTestDataButton" layoutX="260.0" layoutY="103.0" mnemonicParsing="false" onAction="#addTestDataButtonHandler" text="Test Data" />
+      <Button fx:id="addTestDataButton" disable="true" layoutX="260.0" layoutY="103.0" mnemonicParsing="false" onAction="#addTestDataButtonHandler" text="Test Data" />
       <Button fx:id="displayAllCoursesEnrolmentsButton" layoutX="53.0" layoutY="329.0" mnemonicParsing="false" onAction="#displayAllCoursesEnrolmentsButtonHandler" text="Display all courses enrolments" />
    </children>
 </AnchorPane>

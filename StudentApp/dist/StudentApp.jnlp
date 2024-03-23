@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="StudentApp.jar" size="26027" download="eager" />
+    <jar href="StudentApp.jar" size="27607" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="studentapp.StudentApp"  name="StudentApp" />
   <update check="always"/>

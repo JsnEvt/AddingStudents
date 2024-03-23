@@ -112,8 +112,8 @@ public class AddStudentFXMLController implements Initializable {
                 }
             }
             catch(StudentException err){
-                JOptionPane.showMessageDialog(null,err.getMessage());
-                JOptionPane.showMessageDialog(null, "Error: file could not be loaded: '" + FILE_NAME + "'.");
+                JOptionPane.showMessageDialog(null, "Error: invalid data, file could not be loaded: '" +
+                                                                                FILE_NAME + "'." + "\n\n" + err.getMessage());;
             }
             catch(FileNotFoundException err){
                 //Do nothing. File does not yest exist, so this is fine.
